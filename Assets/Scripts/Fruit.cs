@@ -9,9 +9,13 @@ public class Fruit : MonoBehaviour
     
     public Rigidbody fruitRigidbody;
     public BoxCollider fruitCoiilder;
-
+    bool isAwake = false;
+    public ParticleSystem juice;
     private void Awake()
     {
+        juice = GetComponentInChildren<ParticleSystem>();
+        ParticleSystem.MainModule mainModule = juice.main;
+        mainModule.playOnAwake = false;
         whole = transform.Find("Fruit_Whole");
         sliced = transform.Find("Fruit_Sliced");
         fruitRigidbody = GetComponent<Rigidbody>();
@@ -25,7 +29,8 @@ public class Fruit : MonoBehaviour
         whole.gameObject.SetActive(false);
         sliced.gameObject.SetActive(true);
         fruitCoiilder.enabled = false;
-
+        juice.Play();
+       
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         sliced.transform.rotation = Quaternion.Euler(0f, 0f, angle);
 

@@ -79,6 +79,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Apple
       objectReference: {fileID: 0}
+    - target: {fileID: 6432666043563896493, guid: 8a7a2630a7ab3eb468f93af32948f0e4, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937153218569501233, guid: 8a7a2630a7ab3eb468f93af32948f0e4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c69c3df1e33dd9846b9354d1b898b457, type: 2}
     - target: {fileID: 8239229894926407086, guid: 8a7a2630a7ab3eb468f93af32948f0e4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -125,6 +133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whole: {fileID: 0}
   sliced: {fileID: 0}
-  sliceForce: 5
   fruitRigidbody: {fileID: 0}
   fruitCoiilder: {fileID: 0}
+  juice: {fileID: 0}
