@@ -1,2 +1,2 @@
 # UIComponent
- test
+it's ninja fruit learning project...
