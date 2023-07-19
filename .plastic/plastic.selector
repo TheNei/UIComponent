@@ -1,0 +1,4 @@
+repository "UIComponent@neillll@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
