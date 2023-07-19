@@ -14,18 +14,18 @@ public class Fruit : MonoBehaviour
     private void Awake()
     {
         juice = GetComponentInChildren<ParticleSystem>();
-        ParticleSystem.MainModule mainModule = juice.main;
-        mainModule.playOnAwake = false;
         whole = transform.Find("Fruit_Whole");
         sliced = transform.Find("Fruit_Sliced");
         fruitRigidbody = GetComponent<Rigidbody>();
         fruitCoiilder = GetComponent<BoxCollider>();
         whole.gameObject.SetActive(true);
         sliced.gameObject.SetActive(false);
+        whole.gameObject.GetComponent<Collider>().isTrigger = true;
     }
 
     void Slice(Vector3 direction,Vector3 position,float force)
     {
+        UiManager.Instance.score++;
         whole.gameObject.SetActive(false);
         sliced.gameObject.SetActive(true);
         fruitCoiilder.enabled = false;

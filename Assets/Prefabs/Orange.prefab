@@ -4939,6 +4939,7 @@ MonoBehaviour:
   sliced: {fileID: 0}
   fruitRigidbody: {fileID: 0}
   fruitCoiilder: {fileID: 0}
+  juice: {fileID: 0}
 --- !u!65 &1919854817993255723
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5035,7 +5036,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4537731846507777007}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1

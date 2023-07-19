@@ -35,9 +35,9 @@ public class Spawner : MonoBehaviour
         {
             GameObject prefab = prefabs[Random.Range(0, prefabs.Count)];
             Vector3 position = new Vector3();
-            position.x = Random.Range(spawnArea.bounds.min.x, spawnArea.bounds.max.x);
+            position.x = Random.Range(spawnArea.bounds.min.x, spawnArea.bounds.max.x);  
             position.y = Random.Range(spawnArea.bounds.min.y, spawnArea.bounds.max.y);
-            position.z = Random.Range(spawnArea.bounds.min.z, spawnArea.bounds.max.z);
+            position.z = Random.Range(0, 1);
             Quaternion rotation = Quaternion.Euler(0f, 0f, Random.Range(minAngle, maxAngle));
            GameObject fruit = Instantiate(prefab, position, rotation);
             Destroy(fruit, maxLifeTime);
